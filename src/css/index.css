@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'KanitRegular', 'Roboto',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+@font-face {
+  font-family: "KanitRegular";
+  src: local("KanitRegular"),
+    url("../assets/fonts/Kanit-Light.ttf") format("truetype");
+}

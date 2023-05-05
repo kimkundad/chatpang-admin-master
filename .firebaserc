@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "rtt1-ca984",
+    "dev": "rtt1-ca984",
+    "rtt-qa": "rtt-qa",
+    "rtt-test1": "rtt-test1",
+    "test": "rtt-test-beaca"
+  }
+}

@@ -1,0 +1,121 @@
+// @import '~antd/dist/antd.dark.less';
+@import '~antd/dist/antd.less';
+
+@primary-color: #ff7157;
+
+
+.@{menu-prefix-cls} {
+
+   // light theme
+   &&-light,
+   &-light &-sub,
+   &&-light &-sub {
+   }
+ 
+    &-light&-light:not(&-horizontal) &-submenu-active
+    {
+     color: #000;
+    }
+ 
+   &-light &-inline&-sub {
+     background-color: #ff7157;
+   }
+ 
+
+   &-light&-light:not(&-horizontal) &-item-selected {
+    // background-color: rgba(116, 141, 211, 0.253);
+    background-color: rgb(255, 63, 51);
+
+   }
+  // dark theme
+  &&-dark,
+  &-dark &-sub,
+  &&-dark &-sub {
+    background: #ff7157;
+  }
+
+   &-dark&-dark:not(&-horizontal) &-submenu-active
+   {
+   }
+
+  &-light &-inline&-sub {
+    background: #ff7157;
+  }
+
+  // &-dark&-dark:not(&-horizontal) &-submenu-selected {
+  //   background-color: rgb(229, 136, 59);
+  // }
+  &-dark&-dark:not(&-horizontal) &-item-selected {
+    background-color: rgb(255, 63, 51);
+  }
+
+}
+
+//sider theme light
+
+.@{layout-prefix-cls}-sider-light {
+  background: #ff7157;
+
+  .@{layout-prefix-cls}-sider-trigger {
+    color: @layout-trigger-color-light;
+    background: #ff7157;
+  }
+
+  .@{layout-prefix-cls}-sider-zero-width-trigger {
+    color: #000;
+    background: #ff7157;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.1px;
+  height: 0.1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff7157; 
+}
+ 
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff7157; 
+  border-radius: 50px;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7157; 
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+::-webkit-scrollbar-track:horizontal{
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+  background: #bfbfbf;
+  border-radius: 20px;
+}
+
+.ant-input-number-handler-wrap{
+  display:none
+}
+
+
+
+
+
+
+
+
+
+
+
+

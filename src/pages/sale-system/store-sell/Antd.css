@@ -1,0 +1,76 @@
+.pos_form .ant-form-item-explain,
+.pos_form .ant-form-item-extra {
+  clear: both;
+  min-height: 0;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0px;
+  line-height: 0px;
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding-top: 0px;
+}
+
+.pos_form .field_id{
+  font-family: sans-serif;
+  background-color: #FFE5B4;
+}
+
+/* .pos_form .ant-input[disabled]:hover */
+.pos_form .ant-input[disabled] {
+  color: #464646
+}
+
+.pos_select,
+.pos_form  .ant-form-item-label, 
+.pos_form  .ant-input, 
+.pos_form  .ant-select-item-option-content,
+.pos_form [class^=ant-select],
+.pos_form [class^=ant-btn]
+{
+  font-family: sans-serif;
+}
+
+.fieldname
+{
+  display: 'flex' !important;
+  font-family: sans-serif !important;
+  align-items: center !important;
+}
+
+
+.pos_form .ant-form-item-has-error .ant-input,
+.pos_form .ant-form-item-has-error .ant-picker,
+.pos_form .ant-form-item-has-error .ant-select
+ {
+  background-color: #FDE7E7;
+}
+ 
+.pos_form .ant-form-item-has-error .ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #FDE7E7;
+
+}
+
+.pos_form .ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-picker {
+  background-color: #FDE7E7;
+}
+
+
+/* border-color: blue !important; */
+
+/* .ant-form-item-has-error .ant-input, 
+.ant-form-item-has-error .ant-input, 
+.ant-form-item-has-error .ant-input-affix-wrapper, 
+.ant-form-item-has-error .ant-input:hover, 
+.ant-form-item-has-error .ant-input-affix-wrapper:hover {
+  background-color: #fff;
+  border-color:blue;
+} */
+
+/* .ant-form-item-has-error .ant-input, 
+.ant-form-item-has-error .ant-input-affix-wrapper, 
+.ant-form-item-has-error .ant-input:hover, 
+.ant-form-item-has-error .ant-input-affix-wrapper:hover */
+
+/* .ant-form-item-has-error .ant-input-number-focused, 
+.ant-form-item-has-error .ant-picker-focused, 
+.ant-form-item-has-error .ant-input-number:focus, 
+.ant-form-item-has-error .ant-picker:focus */

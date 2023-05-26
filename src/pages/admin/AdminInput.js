@@ -207,7 +207,7 @@ const AdminInput = (props) => {
     bodyFormData.append('file', file.file.originFileObj);
     axios({
       method: 'post',
-      url: 'https://chat-pang-api-fy5xytbcca-as.a.run.app/upload',
+      url: 'https://app.chatpang.co/upload',
       data: bodyFormData,
       headers: { 'Content-Type': 'multipart/form-data' },
     })

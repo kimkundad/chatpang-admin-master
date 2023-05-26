@@ -10,7 +10,7 @@ import Axios from 'axios';
 // const envFound = dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 // const ENV = process.env.REACT_APP_ENV;
 
-const endpoint = 'https://chat-pang-api-fy5xytbcca-as.a.run.app';
+const endpoint = 'https://app.chatpang.co';
 // console.log(process.env.REACT_APP_ENV, endpoint);
 
 // let socket = null;

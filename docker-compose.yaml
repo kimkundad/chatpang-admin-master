@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  web:
+    ports:
+      - "3009:3000"
+    build: .
+    image: zonepangcloud/chatpang-admin-master:v1

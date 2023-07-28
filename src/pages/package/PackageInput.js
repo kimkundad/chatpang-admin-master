@@ -103,11 +103,16 @@ const PackageInput = (props) => {
           name: res.data.data.name,
           price: res.data.data.price,
           detail: list,
+          perDay: res.data.data.per_day,
+          welcomemsg: res.data.data.welcomemsg,
+          keywordmsg: res.data.data.keywordmsg,
           count: res.data.data.page_limit,
           days: res.data.data.days,
           line_notification_limit: res.data.data.line_notification_limit,
           quota_limit: res.data.data.quota_limit,
           special_text: res.data.data.special_text,
+          quota_limit_comment_box: res.data.data.quota_limit_comment_box,
+          quota_limit_comment_send: res.data.data.quota_limit_comment_send,
           isActive: res.data.data.status === 'active' ? true : false,
         };
 
@@ -132,8 +137,13 @@ const PackageInput = (props) => {
       options: values.detail,
       status: values.isActive ? "active" : "inactive",
       pageLimit: parseInt(values.count),
+      perDay: values.perDay,
+      welcomemsg: values.welcomemsg,
+      keywordmsg: values.keywordmsg,
       lineNotificationLimit: parseInt(values.line_notification_limit),
       quotaLimit: limited ? parseInt(1000000) : parseInt(values.quota_limit),
+      quota_limit_comment_box: limited ? parseInt(1000000) : parseInt(values.quota_limit_comment_box),
+      quota_limit_comment_send: limited ? parseInt(1000000) : parseInt(values.quota_limit_comment_send),
       specialText: values.special_text === 1 ? "ขายดี" : "ธรรมดา",
       days: parseInt(values.days),
     };
@@ -174,6 +184,9 @@ const PackageInput = (props) => {
   const handleLimited = (value) => {
     setLimited(value.target.checked)
   }
+
+
+
 
   return (
     <>
@@ -357,6 +370,84 @@ const PackageInput = (props) => {
                     </Form.Item>
                 </Col>
               </Row>
+              <Row gutter={[8, 8]} align="middle">
+              <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                  <Form.Item
+                    name="quota_limit_comment_box"
+                    label="ดึงคอมเม้นเข้า Inbox / วัน"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'กรุณาใส่จำนวนวัน ดึงคอมเม้นเข้า!',
+                      },
+                    ]}
+                  >
+                    <Input style={{ fontFamily: 'KanitRegular' }} disabled={limited} />
+                  </Form.Item>
+                </Col>
+                <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                  <Form.Item
+                    name="quota_limit_comment_send"
+                    label="ตอบคอมเม้น / วัน"
+                    rules={[
+                      {
+                        required: true,
+                        message: 'กรุณาใส่จำนวนวัน ตอบคอมเม้น!',
+                      },
+                    ]}
+                  >
+                    <Input style={{ fontFamily: 'KanitRegular' }} disabled={limited} />
+                  </Form.Item>
+                </Col>
+              </Row>
+              <Row align="middle" >
+                <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+
+                <Form.Item
+                  name="perDay"
+                  label="สถานะ"
+                  valuePropName="checked"
+                  rules={[
+                  {
+                    required: true,
+                    message: 'Please input your Status!',
+                  },
+                  ]}
+                  >
+                    <Checkbox>เลือกจำกัดตอบกลับของ Bot รายวัน</Checkbox>
+                  </Form.Item>
+
+                     
+                </Col>
+              </Row>
+              <Row align="middle" >
+                <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+
+                <Form.Item
+                  name="welcomemsg"
+                  label="สถานะ"
+                  valuePropName="checked"
+                  >
+                    <Checkbox>เปิดใช้งาน ข้อความต้อนรับ</Checkbox>
+                  </Form.Item>
+
+                     
+                </Col>
+              </Row>
+              <Row align="middle" >
+                <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+
+                <Form.Item
+                  name="keywordmsg"
+                  label="สถานะ"
+                  valuePropName="checked"
+                  >
+                    <Checkbox>เปิดใช้งาน ตอบตามคีย์เวิร์ด</Checkbox>
+                  </Form.Item>
+
+                     
+                </Col>
+              </Row>
               <Row align="middle" style={{ marginBottom: 24 }}>
                 <Col xs={{ span: 24 }} lg={{ span: 24 }}>
                      <Checkbox value={limited} onChange={handleLimited}>การตอบกลับของ Bot เเบบไม่มีจำกัด</Checkbox>
@@ -376,14 +467,14 @@ const PackageInput = (props) => {
                           {() => {
                             return (
                               <>
-                                {[0, 1, 2, 3].map((field, index) => (
+                                {[0, 1, 2, 3, 4, 5].map((field, index) => (
                                   <Form.Item
+                                  label={'รายละเอียดที่ ' + [index+1]}
                                     name={[index]}
                                     rules={[
                                       {
                                         message:
                                           'Please input your Package Detail!',
-                                        required: true,
                                       },
                                     ]}
                                   >
@@ -404,13 +495,6 @@ const PackageInput = (props) => {
                                 {fields.map((field, index) => (
                                   <Form.Item
                                     name={[index]}
-                                    rules={[
-                                      {
-                                        message:
-                                          'Please input your Package Detail!',
-                                        required: true,
-                                      },
-                                    ]}
                                   >
                                     <Input
                                       style={{ fontFamily: 'KanitRegular' }}

@@ -262,6 +262,89 @@ const PackageDetail = (props) => {
                     <Row gutter={[8, 8]} align="middle" style={{ marginTop: -12 }}>
                         <Col xs={{ span: 24 }} lg={{ span: 12 }}>
                             <Form.Item>
+                                <Typography.Text>
+                                    ดึงคอมเม้นเข้า Inbox / วัน
+                                    {' '}
+                                    :
+                                    {' '}
+                                    {detail.quota_limit_comment_box}
+                                    {' '}
+                                    ข้อความ
+                                </Typography.Text>
+                            </Form.Item>
+                        </Col>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                            <Form.Item>
+                                <Typography.Text>
+                                    ตอบคอมเม้น / วัน
+                                    {' '}
+                                    :
+                                    {' '}
+                                    {detail.quota_limit_comment_send}
+                                    {' '}
+                                    ข้อความ
+                                </Typography.Text>
+                            </Form.Item>
+                        </Col>
+                        
+                    </Row>
+                    <Row gutter={[8, 8]} align="middle" style={{ marginTop: -12 }}>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                            <Form.Item>
+                                <Typography.Text>
+                                เลือกจำกัดตอบกลับของ Bot รายวัน
+                                {' '}
+                                :
+                                {' '}
+                                </Typography.Text>
+                                <Checkbox
+                                    style={{ marginLeft: 8 }}
+                                    checked={detail.per_day}
+                                    disabled
+                                >
+                                </Checkbox>
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={[8, 8]} align="middle" style={{ marginTop: -12 }}>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                            <Form.Item>
+                                <Typography.Text>
+                                เลือกเปิดใช้งาน ข้อความต้อนรับ
+                                {' '}
+                                :
+                                {' '}
+                                </Typography.Text>
+                                <Checkbox
+                                    style={{ marginLeft: 8 }}
+                                    checked={detail.welcomemsg}
+                                    disabled
+                                >
+                                </Checkbox>
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={[8, 8]} align="middle" style={{ marginTop: -12 }}>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                            <Form.Item>
+                                <Typography.Text>
+                                เลือกเปิดใช้งาน ตอบตามคีย์เวิร์ด
+                                {' '}
+                                :
+                                {' '}
+                                </Typography.Text>
+                                <Checkbox
+                                    style={{ marginLeft: 8 }}
+                                    checked={detail.keywordmsg}
+                                    disabled
+                                >
+                                </Checkbox>
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={[8, 8]} align="middle" style={{ marginTop: -12 }}>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }}>
+                            <Form.Item>
                                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                                     <div style={{ marginBottom: 6 }}>
                                         <Typography.Text>
